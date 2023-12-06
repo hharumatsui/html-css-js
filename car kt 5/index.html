@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="car">
+        <div class="rect"></div>
+        <div class="front">
+          <div class="window"></div>
+          <div class="f_hood"></div>
+        </div>
+        <div class="tyres"></div>
+        <div class="f_tyres"></div>
+        <div class="ff_tyres"></div>
+        <div class="hood"></div>
+      </div>
+      <style>
+        @keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(850px);
+  }
+}
+        body{
+    width:1000px;
+    margin:100px auto;
+    background:#ccc;
+    position: absolute;
+    transition: all 2s ease-in-out;
+    animation: move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  }
+  #car {
+    position:relative;  
+    width:212px;
+  }
+  .rect {
+    width:150px;
+    height:100px;
+    background:black;  
+    position:relative;  
+  }
+  .front {
+    position:absolute;
+    top:25px;
+    right:0;
+    background:black;
+    width:60px;
+    height:70px;
+    border-radius:0 55px 0 0;
+  }
+  .hood {
+    width:225px;
+    background:black;
+    height:7px;
+    position:absolute;
+    left:-3px;
+    bottom:-2px;
+    border-radius:3px;
+  }
+  .window{
+    position:absolute;
+    background:white;
+    width:42px;
+    height:15px;
+    border-radius:0 15px 0 0;
+    padding-bottom:10px;
+    top:18px;
+    left:7px;
+  }
+  .f_hood {
+    position:absolute;
+    background:black;
+    width:68px;
+    height:30px;
+    border-radius:0 5px 5px 0;
+    bottom:-7px;
+  }
+  .tyres,.f_tyres,.ff_tyres {
+    width:30px;
+    height:30px;
+    background:black;
+    border-radius:30px;
+    position:absolute;
+    border:2px solid #ccc;
+    bottom:-15px;
+    z-index:1;
+  }
+  .tyres{left:10px;}
+  .f_tyres {
+     left:100px;
+  }
+  .ff_tyres {
+    right:10px;
+  }
+  .tyres::after,
+  .f_tyres::after,
+  .ff_tyres::after {
+    content:"";
+    background:#fff;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    top:5px;left:5px;
+    position:absolute;
+  }
+      </style>
+    
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Первая страничка</h1>
+    <main>
+        <div class="column">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </main>
+<style>
+        .box {
+            width: 100px;
+    height: 100px;
+    background-color: rgb(79, 224, 250);
+    margin: 10px;
+        }
+        .column{
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    height: 100%;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    padding: 10px;
+        }
+        
+        .dialog-wrapper {
+            display: none !important;
+        }
+
+        .wrap,
+        #main {
+            height: 100vh;
+            margin: 0 !important;
+        }
+
+        iframe {
+            display: none;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .page-preview {
+            border-radius: 0;
+            height: 100%;
+        }
+
+        .page-preview-header {
+            background: #f2f2f2;
+            border: none;
+            height: 70px;
+            position: relative;
+            text-align: center;
+        }
+
+        .page-preview-header > a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 4px;
+        }
+
+        .page-preview-header > a:hover {
+            background: #e2f0fc;
+            text-decoration: none;
+        }
+
+        .page-preview-header > a.active {
+            background: #c9e4f9;
+        }
+
+        .page-preview-header > .close {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .page-preview-body {
+            height: calc(100% - 70px);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-preview-body iframe {
+            border: none;
+            display: inline-block;
+            height: 100%;
+        }
+        @media(max-width: 400px){
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: rgb(79, 224, 250);
+                
+            }
+        }
+    
+</style>
+<script>
+    
+    if (window.parent) {
+                var _w = 0, _h = 0;
+                var updateFormSize = function () {
+                    var form = $('form.shaped-form-extended,form.shaped-form');
+                    var w = form.outerWidth(true);
+                    var h = form.outerHeight(true);
+                    if (Math.abs(_w - w) > 5 || Math.abs(_h - h) > 5) {
+                        _w = w;
+                        _h = h;
+                        var msg = { key: 'login-frame-size', width: w, height: h };
+                        window.parent.postMessage(msg, "*");
+                    }
+                    setTimeout(updateFormSize, 300);
+                }
+                updateFormSize();
+            }
+        
+</script>
+    
+
+        
+    
+
+
+</body>
+</html>

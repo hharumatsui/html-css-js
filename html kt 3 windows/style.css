@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100&display=swap');
+h2{
+    color: aquamarine;
+    text-align: center;
+    letter-spacing: 1rem;
+    font-size: 30px;
+}
+.green.text{
+    color: rgb(blue, green, blue);
+}
+h2{
+    color: royalblue;
+}
+
+body{
+   background-image: url(https://sun9-20.userapi.com/impf/DIMzDIP6pBuLSnV-H_qaAHydyOcpzUTMff-bIg/N2SjzV2gCQc.jpg?size=604x604&quality=96&sign=a8c835122682e2d78c1f8bca5cd906cc&type=album);
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-position: 50x 100y;
+   background-size: cover;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.opt{
+    text-transform: uppercase;
+} 
